@@ -11,7 +11,6 @@ runtime:
         - sodium
         - ctype
         - iconv
-        
 
 build:
     flavor: none
@@ -27,6 +26,7 @@ disk: 512
 
 mounts:
     "/var": { source: local, source_path: var }
+    "/public/uploads": { source: local, source_path: uploads }
 
 hooks:
     build: |
