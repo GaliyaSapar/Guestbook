@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20200404121649 extends AbstractMigration
+final class Version20200407054151 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -20,14 +20,6 @@ final class Version20200404121649 extends AbstractMigration
     public function up(Schema $schema) : void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'postgresql', 'Migration can only be executed safely on \'postgresql\'.');
-
-//        $this->addSql('ALTER TABLE conference ADD slug VARCHAR(255) NOT NULL');
-        $this->addSql('ALTER TABLE conference ADD slug VARCHAR(255)');
-        $this->addSql("UPDATE conference SET slug=CONCAT(LOWER(city), '-', year)" );
-        $this->addSql('ALTER TABLE conference ALTER COLUMN slug SET NOT NULL');
-
-
 
     }
 
@@ -37,6 +29,5 @@ final class Version20200404121649 extends AbstractMigration
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'postgresql', 'Migration can only be executed safely on \'postgresql\'.');
 
         $this->addSql('CREATE SCHEMA public');
-        $this->addSql('ALTER TABLE conference DROP slug');
     }
 }
