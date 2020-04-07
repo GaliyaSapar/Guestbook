@@ -29,7 +29,7 @@ class ConferenceControllerTest extends WebTestCase
         $this->assertPageTitleContains('London 2018');
         $this->assertResponseIsSuccessful();
         $this->assertSelectorTextNotContains('h2', 'Add your own feedback');
-        $this->assertSelectorExists('div:contains("No comments have been posted yet for this conference.")');
+        $this->assertSelectorExists('div:contains("There are 1 comments")');
     }
 
     public function testCommentSubmission()
@@ -45,6 +45,6 @@ class ConferenceControllerTest extends WebTestCase
 
         $this->assertResponseRedirects();
         $client->followRedirect();
-        $this->assertSelectorExists('div:contains("There are 1 comments")');
+        $this->assertSelectorExists('div:contains("There are 2 comments")');
     }
 }
