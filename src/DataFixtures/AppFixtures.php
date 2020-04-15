@@ -6,8 +6,8 @@ use App\Entity\Admin;
 use App\Entity\Comment;
 use App\Entity\Conference;
 use Doctrine\Bundle\FixturesBundle\Fixture;
-use Doctrine\Common\Persistence\ObjectManager;
-use Symfony\Component\Security\Core\Encoder\EncoderFactory;
+
+use Doctrine\Persistence\ObjectManager;
 use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
 
 class AppFixtures extends Fixture
