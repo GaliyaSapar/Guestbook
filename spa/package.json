@@ -18,6 +18,8 @@
     "html-webpack-plugin": "^4.2.0",
     "node-sass": "^4.13.1",
     "preact": "^10.4.0",
-    "preact-router": "^3.2.1"
+    "preact-router": "^3.2.1",
+    "sass-loader": "^7.0.3",
+    "webpack": "^4.42.1"
   }
 }
